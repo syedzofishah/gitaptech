@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    h1{
+        color: black;
+        text-align: center;
+    }
+h3{
+    color: green;
+    text-align: center;
+}
+body{
+    background-color:coral ;
+    border: 4px solid black;
+}
+.boo{ background-color:  orange;
+
+}
+.cont{
+    border: 2px solid green;
+}
+
+
+
+  </style>  
+
+
+
+
+</head>
+
+<body>
+    <div class="boo">
+        <div class="cont">    
+<h1>FUNCTION 1</h1>
+<H3 id="REGEX"></H3>
+</div>
+<div class="cont">
+<h1>FUNCTION 2</h1>
+<h3 id="REGEX1"></h3>
+</div>
+<div class="cont">
+<h1>FUNCTION 3</h1>
+<h3 id="REGEX2"></h3>
+</div>
+<div class="cont">
+<h1>FUNCTION 4</h1>
+<h3 id="REGEX3"></h3>
+</div>
+<div class="cont">
+<h1>FUNCTION 5</h1>
+<h3 id="REGEX4"></h3>
+</div>
+
+</div>
+
+
+
+    <script>
+const text ="I AM GOING TO ISLAMABAD AND MULTAN GOING TO HOME"
+const Regex =/GOING/gi // literal java script
+//const regex=/GOING/g global
+//const regex=/GOING/i case insestitive
+let a=document.getElementById("REGEX")
+let b=document.getElementById("REGEX1")
+let c=document.getElementById("REGEX2")
+let d=document.getElementById("REGEX3")
+let e=document.getElementById("REGEX4")
+
+
+
+
+console.log(Regex)
+ console.log(Regex.source)
+
+
+ let result=Regex.exec(text) // MATCH THE SYNTAX IF MATCH GIVES ARRAY IF NOT NULL
+ a.innerText= result
+
+  let result1=Regex.test(text) // TRUE OR FALSE
+  b.innerText= result1
+
+  let result2 = text.match(Regex) // MATCH AND RESULT ARRAY OR NULL
+  c.innerText= result2
+
+  let result3 = text.search(Regex) // SEARCH RETURNS MATCHED OR -1
+  d.innerText= result3
+
+  let result4 = text.replace(Regex,'WENT') // REPLACE THE WORD
+e.innerText= result4
+
+
+</script>
+</body>
+</html>

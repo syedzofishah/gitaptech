@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <label for="fname" >First name:</label><br>
+        <input type="text" id="a" name="fname" value=""><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="b" name="lname" value=""><br><br>
+<input type="button" value = "SUBMIT" ID="C">
+
+
+<script>
+    // WHEN TAB IS PRESSED ON INPUT BAR IT GIVES OUTPUT
+let a=document.getElementById("a")
+let b=document.getElementById("b")
+const Regex=/^[a-zA-z0-9_]{3,20}$/
+
+a.addEventListener("blur", ()=>{
+console.log(a.value)
+let result=Regex.test(a.value)
+if(result){
+alert("true")
+}
+else{
+alert("false")
+}
+})
+b.addEventListener("blur", ()=>{
+console.log(a.value)
+let results=text.test(b.value)
+if(results){
+alert("true")
+}
+else{
+alert("false")
+}
+})
+
+
+</script>
+
+
+</body>
+</html>
